@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head> 
+</head>
+<body>
+  <h2>Session Storage</h2>
+  <div id="output">See the result here :</div>
+  <br><button onclick="counter();">click me</button>
+  <script type="text/javascript">
+    function counter() {
+     if(sessionStorage.hits){
+      sessionStorage.hits=Number(sessionStorage.hits)+1;
+}
+ else{
+  sessionStorage.hits=1;
+ }
+ document.getElementById('output').innerHTML= "You have clicked counter button for"+ " "+ sessionStorage.hits +" "+"times";
+}
+  </script>
+</body>
+</html>
+
+ 
