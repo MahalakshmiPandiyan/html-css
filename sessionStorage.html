@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head> 
+<head>
+  <style>
+
+    body{
+      color: green;
+      text-align: center;
+      font-size: 30px;
+      margin-top: 30px;
+      font-style: italic;
+    }
+  </style>
+  
 </head>
 <body>
-  <h2>Session Storage</h2>
-  <div id="output">See the result here :</div>
-  <br><button onclick="counter();">click me</button>
-  <script type="text/javascript">
-    function counter() {
-     if(sessionStorage.hits){
-      sessionStorage.hits=Number(sessionStorage.hits)+1;
+  <button onclick="getName()" type="button" >GetName</button>
+  <p id ="id1"> </p>
+<script>
+function getName(){
+
+  sessionStorage.setItem("name","Nithiya");
+   document.getElementById("id1").innerHTML=sessionStorage.getItem("name");
 }
- else{
-  sessionStorage.hits=1;
- }
- document.getElementById('output').innerHTML= "You have clicked counter button for"+ " "+ sessionStorage.hits +" "+"times";
-}
-  </script>
+</script>
 </body>
 </html>
-
  
