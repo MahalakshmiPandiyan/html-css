@@ -14,15 +14,14 @@
   
 </head>
 <body>
+  <button onclick="getName()" type="button" >GetName</button>
+  <p id ="id1"> </p>
 <script>
+function getName(){
 
- if(typeof(Storage)!=="undefined") {
   localStorage.setItem("name","Nithiya");
-   document.write("Hi"+" "+localStorage.name);
+   document.getElementById("id1").innerHTML=localStorage.getItem("name");
 }
- else{
-  alert("Sorry! your browser is not supporting the browser")
- }
 </script>
 </body>
 </html>
